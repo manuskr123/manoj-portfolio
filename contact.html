@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Manoj Kumar</title>
+  <meta name="description" content="Get in touch with Manoj Kumar for web development, design, and video production projects. Available worldwide from Sikar, Rajasthan.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Global Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">MANOJ X <span>STUDIO</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="work-showcase.html">Work Showcase</a></li>
+          <li><a href="writing.html">Writing</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section style="padding: 10rem 0 4rem; border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <span class="eyebrow">Get In Touch</span>
+      <h1 style="font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 1rem;">Let's Build Something Cinematic.</h1>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px;">
+        Available for select projects worldwide. Drop a line and I'll respond within 24 hours.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Grid Section -->
+  <section style="padding: 6rem 0;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem;">
+      
+      <!-- Contact Info -->
+      <div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Direct Channels</h3>
+        <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem;">
+          <div>
+            <span style="font-size: 0.85rem; color: var(--accent); font-family: var(--font-heading); display: block; margin-bottom: 0.25rem;">EMAIL</span>
+            <a href="mailto:itsmanuskr@gmail.com" style="font-size: 1.1rem; color: var(--text-primary); text-decoration: underline;">itsmanuskr@gmail.com</a>
+          </div>
+          <div>
+            <span style="font-size: 0.85rem; color: var(--accent); font-family: var(--font-heading); display: block; margin-bottom: 0.25rem;">PHONE & WHATSAPP</span>
+            <a href="tel:+919929375172" style="font-size: 1.1rem; color: var(--text-primary);">+91 99293 75172</a>
+          </div>
+          <div>
+            <span style="font-size: 0.85rem; color: var(--accent); font-family: var(--font-heading); display: block; margin-bottom: 0.25rem;">LOCATION</span>
+            <p style="font-size: 1.1rem; color: var(--text-primary);">Sikar, Rajasthan · IN</p>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Coordinates: 27.6094° N · 75.1399° E</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 1rem;">
+          <a href="https://wa.me/919929375172" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Open WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div style="background-color: var(--surface); border: 1px solid var(--border); padding: 2.5rem; border-radius: 8px;">
+        <h3 style="font-size: 1.35rem; margin-bottom: 1.5rem;">Send a Message</h3>
+        <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div>
+            <label for="name" style="display: block; font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Your Name *</label>
+            <input type="text" id="name" required style="width: 100%; padding: 0.875rem; background: var(--surface-elevated); border: 1px solid var(--border); color: var(--text-primary); border-radius: 4px; font-family: var(--font-body);">
+          </div>
+          <div>
+            <label for="email" style="display: block; font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Your Email *</label>
+            <input type="email" id="email" required style="width: 100%; padding: 0.875rem; background: var(--surface-elevated); border: 1px solid var(--border); color: var(--text-primary); border-radius: 4px; font-family: var(--font-body);">
+          </div>
+          <div>
+            <label for="projectType" style="display: block; font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Project Type</label>
+            <select id="projectType" style="width: 100%; padding: 0.875rem; background: var(--surface-elevated); border: 1px solid var(--border); color: var(--text-primary); border-radius: 4px; font-family: var(--font-body);">
+              <option value="Front-End Development">Front-End Development</option>
+              <option value="Office & Documentation">Office Work & Documentation</option>
+              <option value="Graphic Design">Graphic Design</option>
+              <option value="Video Editing">Video Editing</option>
+              <option value="General Inquiry">General Inquiry</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" style="display: block; font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Message *</label>
+            <textarea id="message" rows="5" required style="width: 100%; padding: 0.875rem; background: var(--surface-elevated); border: 1px solid var(--border); color: var(--text-primary); border-radius: 4px; font-family: var(--font-body); resize: vertical;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Send Message</button>
+          <p id="formStatus" style="font-size: 0.85rem; text-align: center; margin-top: 0.5rem;"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <a href="index.html" class="logo">MANOJ X <span>STUDIO</span></a>
+        <p>"The Logic of an MCA, The Vision of a Designer." Building cinematic digital experiences from Sikar, Rajasthan.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="work-showcase.html">Work Showcase</a></li>
+          <li><a href="writing.html">Writing</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:itsmanuskr@gmail.com">Email Me</a></li>
+          <li><a href="https://wa.me/919929375172" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Manoj Kumar. All rights reserved.</p>
+      <p>Cinematic Creative Engineering</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

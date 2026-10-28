@@ -1,0 +1,45 @@
+[
+  {
+    "category": "Internship",
+    "type": "pdf",
+    "description": "Professional engineering internship documentation and verified completion records.",
+    "buttonText": "View Internship Work",
+    "url": "https://drive.google.com/file/d/1qTbh93c4E1mouADW-UrzHhk9Nu5-VmrG/view?usp=sharing"
+  },
+  {
+    "category": "Freelancing",
+    "type": "cards",
+    "description": "Client production and web deliverables deployed in professional settings.",
+    "items": [
+      {
+        "title": "NOC Portal",
+        "url": "https://lnkd.in/p/gnwBQVSV"
+      },
+      {
+        "title": "Task Master — To-Do Application",
+        "url": "https://lnkd.in/p/gnwBQVSV"
+      }
+    ]
+  },
+  {
+    "category": "Computer Operator & Back Office",
+    "type": "folder",
+    "description": "Administrative document systems, automated registers, and structured spreadsheets.",
+    "buttonText": "View Office Work",
+    "url": "https://drive.google.com/drive/folders/1ZCOakgCmZdXnmFNok72WtDWTO-bxT7aZ?usp=sharing"
+  },
+  {
+    "category": "Graphic Designing",
+    "type": "folder",
+    "description": "Posters, brand identities, digital assets, and high-impact visual layouts.",
+    "buttonText": "View Designs",
+    "url": "https://drive.google.com/drive/folders/14feXehlnCBYj5uDEU5E_IkPPF6co7W6O?usp=drive_link"
+  },
+  {
+    "category": "Video Editing",
+    "type": "folder",
+    "description": "Cinematic music videos, color grading, lyrical cuts, and dynamic visual motion reels.",
+    "buttonText": "View Video Editing Work",
+    "url": "https://drive.google.com/drive/folders/1rWvGIo3tsX1DBNhFlzxMd7gsQpeHMa05?usp=sharing"
+  }
+]

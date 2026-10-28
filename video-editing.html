@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Editing Showcase — Manoj Kumar</title>
+  <meta name="description" content="Explore the complete collection of 16 professional video edits, AI productions, commercials, and social media reels by Manoj Kumar with interactive playback.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    /* Cinematic Video Modal Lightbox Styles */
+    .video-modal {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(11, 13, 12, 0.96);
+      backdrop-filter: blur(18px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .video-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .video-modal-content {
+      position: relative;
+      width: 100%;
+      max-width: 950px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: scale(0.95);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .video-modal.active .video-modal-content {
+      transform: scale(1);
+    }
+    .video-modal-content video {
+      width: 100%;
+      max-height: 72vh;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #000;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.85), 0 0 30px rgba(197, 244, 103, 0.15);
+    }
+    .video-modal-close {
+      position: absolute;
+      top: -3.5rem;
+      right: 0;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 2.25rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .video-modal-close:hover {
+      color: var(--accent);
+    }
+    .video-modal-info {
+      margin-top: 1.5rem;
+      text-align: center;
+      color: var(--text-primary);
+      font-family: var(--font-heading);
+    }
+    .video-modal-info h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.35rem;
+    }
+    .video-modal-info p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-family: var(--font-body);
+    }
+    .video-card-thumb {
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .video-card-thumb:hover .play-overlay {
+      background: rgba(197, 244, 103, 0.25);
+      border-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Global Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">MANOJ X <span>STUDIO</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="work-showcase.html">Work Showcase</a></li>
+          <li><a href="writing.html">Writing</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section style="padding: 12rem 0 4rem; border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <span class="eyebrow">Motion & Post-Production Archive</span>
+      <h1 style="font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 1rem;">Video Editing Collection</h1>
+      <p style="color: var(--text-secondary); font-size: 1.15rem; max-width: 650px;">
+        A comprehensive showcase featuring all 16 cinematic video productions, AI-generated concept reels, commercial promotions, and social media edits. Click any video to play.
+      </p>
+    </div>
+  </section>
+
+  <!-- Complete 16 Videos Gallery Grid -->
+  <section style="padding: 6rem 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 3rem;">
+
+        <!-- Video 1 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/Wedding Invitation final.mp4" data-title="Cinematic Wedding Invitation Card" data-desc="An elegant AI-generated video invitation showcasing essential wedding event details with sophisticated motion graphics." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">WEDDING INVITATION</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">Wedding Invitation final.mp4</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">AI Motion Design</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Cinematic Wedding Invitation</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">An elegant AI-generated video invitation showcasing essential wedding event details with sophisticated motion graphics.</p>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/Astrology app video ai generated" data-title="Vedic Astrology App Promo" data-desc="Engaging promotional video for an astrology application demonstrating a user consulting an AI astrologer for their horoscope reading." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">ASTROLOGY APP PROMO</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">Astrology app video ai generated</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">App Promotion</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Vedic Astrology App Promo</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Engaging promotional video for an astrology application demonstrating a user consulting an AI astrologer for their horoscope reading.</p>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/SHOWROOM.mp4" data-title="Apparel Showroom Commercial" data-desc="Commercial promotional video highlighting a high-end apparel showroom, featuring new collection launches and fabric variety." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">SHOWROOM PROMO</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">SHOWROOM.mp4</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Commercial Motion</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Apparel Showroom Commercial</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Commercial promotional video highlighting a high-end apparel showroom, featuring new collection launches and fabric variety.</p>
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/SHOWING EXPORT WAREHOUSE.mp4" data-title="Textile Export Warehouse Showcase" data-desc="Comprehensive walkthrough and documentary-style showcase of a textile export warehouse operations and workflow." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">EXPORT WAREHOUSE</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">SHOWING EXPORT WAREHOUSE.mp4</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Corporate Walkthrough</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Textile Export Warehouse Showcase</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Comprehensive walkthrough and documentary-style showcase of a textile export warehouse operations and workflow.</p>
+          </div>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/Invitation Card.mp4" data-title="Digital Wedding Invitation Card" data-desc="Modern AI-generated digital wedding invitation video complete with event timelines and sophisticated visuals." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">DIGITAL INVITATION</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">Invitation Card.mp4</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">AI Motion Design</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Digital Wedding Invitation Card</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Modern AI-generated digital wedding invitation video complete with event timelines and sophisticated visuals.</p>
+          </div>
+        </div>
+
+        <!-- Video 6 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/hostellife _loop(MP4).mp4" data-title="College Hostel Life Reel" data-desc="Relatable and dynamic reel capturing the vibrant everyday life, friendships, and experiences of college hostel students." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">COLLEGE HOSTEL LIFE</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">hostellife _loop(MP4).mp4</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Social Reel</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">College Hostel Life Reel</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Relatable and dynamic reel capturing the vibrant everyday life, friendships, and experiences of college hostel students.</p>
+          </div>
+        </div>
+
+        <!-- Video 7 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/hello ram.mov" data-title="AI Tools Workflow Demonstration" data-desc="Informative AI-integrated video demonstration illustrating advanced AI tool workflows and digital asset management." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">AI DEMO WORKFLOW</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">hello ram.mov</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">AI Production</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">AI Tools Workflow Demonstration</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Informative AI-integrated video demonstration illustrating advanced AI tool workflows and digital asset management.</p>
+          </div>
+        </div>
+
+        <!-- Video 8 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/GOVT SCHOOL (2).mp4" data-title="Government School Campus Tour" data-desc="Architectural and campus showcase video highlighting government school infrastructure, green parks, and facilities." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">GOVT SCHOOL SHOWCASE</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">GOVT SCHOOL (2).mp4</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Institutional Video</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Government School Campus Tour</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Architectural and campus showcase video highlighting government school infrastructure, green parks, and facilities.</p>
+          </div>
+        </div>
+
+        <!-- Video 9 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/GLITCH EFFECT REEL .mp4" data-title="Glitch Effect Showroom Reel" data-desc="Trendy, high-energy promotional glitch-effect social media reel crafted for a customer showroom campaign." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">GLITCH EFFECT REEL</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">GLITCH EFFECT REEL .mp4</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">VFX & Motion</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Glitch Effect Showroom Reel</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Trendy, high-energy promotional glitch-effect social media reel crafted for a customer showroom campaign.</p>
+          </div>
+        </div>
+
+        <!-- Video 10 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/FAIRSHOOT.mp4" data-title="Summer Singapore Carnival Coverage" data-desc="Vibrant promotional coverage of the Summer Singapore Carnival, showcasing attractions, apparel stalls, and amusement rides." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">CARNIVAL COVERAGE</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">FAIRSHOOT.mp4</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Event Coverage</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Summer Singapore Carnival Coverage</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Vibrant promotional coverage of the Summer Singapore Carnival, showcasing attractions, apparel stalls, and amusement rides.</p>
+          </div>
+        </div>
+
+        <!-- Video 11 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/Copy of ADLS FINAL TASK.mp4" data-title="Anti-Smoking Health Campaign" data-desc="Health awareness campaign video featuring a professional medical practitioner discussing the adverse health effects of smoking and tobacco." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">HEALTH AWARENESS</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">Copy of ADLS FINAL TASK.mp4</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Social Campaign</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Anti-Smoking Health Campaign</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Health awareness campaign video featuring a professional medical practitioner discussing the adverse health effects of smoking and tobacco.</p>
+          </div>
+        </div>
+
+        <!-- Video 12 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/car edit.mov" data-title="Custom Mahindra Thar Cinematic Edit" data-desc="Dynamic cinematic automotive edit showcasing a customized Mahindra Thar with high-contrast grading and motion pacing." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">THAR AUTOMOTIVE EDIT</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">car edit.mov</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Automotive Motion</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Custom Mahindra Thar Cinematic Edit</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Dynamic cinematic automotive edit showcasing a customized Mahindra Thar with high-contrast grading and motion pacing.</p>
+          </div>
+        </div>
+
+        <!-- Video 13 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/20th reel.mp4" data-title="Ice Cream Factory AI Reel" data-desc="Fully AI-generated industrial reel illustrating automated machine manufacturing processes inside an ice cream production factory." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">ICE CREAM FACTORY AI</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">20th reel.mp4</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">AI Industrial Reel</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Ice Cream Factory AI Reel</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Fully AI-generated industrial reel illustrating automated machine manufacturing processes inside an ice cream production factory.</p>
+          </div>
+        </div>
+
+        <!-- Video 14 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/15th sep reel tag.mp4" data-title="Fast Food Ingredients Brand Reel" data-desc="Commercial promotional reel for a food ingredients brand demonstrating how specialized additives elevate the flavor profile of fast foods." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">FOOD INGREDIENTS PROMO</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">15th sep reel tag.mp4</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Food & Beverage</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Fast Food Ingredients Brand Reel</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Commercial promotional reel for a food ingredients brand demonstrating how specialized additives elevate the flavor profile of fast foods.</p>
+          </div>
+        </div>
+
+        <!-- Video 15 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/10 sep reel vedic.mp4" data-title="Vedic Astrology Mobile App Reel" data-desc="Targeted promotional video for a Vedic astrology mobile app highlighting personalized horoscope consultation features." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">VEDIC ASTROLOGY REEL</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">10 sep reel vedic.mp4</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">App Marketing</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Vedic Astrology Mobile App Reel</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Targeted promotional video for a Vedic astrology mobile app highlighting personalized horoscope consultation features.</p>
+          </div>
+        </div>
+
+        <!-- Video 16 -->
+        <div class="cinematic-card" style="background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+          <div class="video-card-thumb video-trigger" data-src="assets/videos/1st sep tag reel.mp4" data-title="Wooden Spoon Manufacturing AI Reel" data-desc="AI-generated industrial showcase of an eco-friendly wooden spoon manufacturing factory supplying sustainable cutlery for food stalls." style="height: 260px; background-color: var(--surface-elevated); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(19,22,20,0.9), rgba(11,13,12,0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.5rem;">WOODEN SPOON FACTORY AI</span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">1st sep tag reel.mp4</span>
+            </div>
+            <div class="play-overlay" style="position: absolute; width: 60px; height: 60px; background: rgba(11, 13, 12, 0.85); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.25rem; z-index: 2; transition: var(--transition);">▶</div>
+          </div>
+          <div style="padding: 2.5rem;">
+            <span style="font-size: 0.8rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; display: block; margin-bottom: 0.5rem;">AI Industrial Reel</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Wooden Spoon Manufacturing AI Reel</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">AI-generated industrial showcase of an eco-friendly wooden spoon manufacturing factory supplying sustainable cutlery for food stalls.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Player Modal Container -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-modal-content">
+      <button id="videoModalClose" class="video-modal-close">&times;</button>
+      <video id="modalVideoElement" controls autoplay></video>
+      <div class="video-modal-info">
+        <h3 id="videoModalTitle"></h3>
+        <p id="videoModalDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <a href="index.html" class="logo">MANOJ X <span>STUDIO</span></a>
+        <p>"The Logic of an MCA, The Vision of a Designer." Building cinematic digital experiences from Sikar, Rajasthan.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="work-showcase.html">Work Showcase</a></li>
+          <li><a href="writing.html">Writing</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:itsmanuskr@gmail.com">Email Me</a></li>
+          <li><a href="https://wa.me/919929375172" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Manoj Kumar. All rights reserved.</p>
+      <p>Cinematic Creative Engineering</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Video Player Lightbox Script
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('videoModal');
+      const videoEl = document.getElementById('modalVideoElement');
+      const modalTitle = document.getElementById('videoModalTitle');
+      const modalDesc = document.getElementById('videoModalDesc');
+      const closeBtn = document.getElementById('videoModalClose');
+
+      document.querySelectorAll('.video-trigger').forEach(card => {
+        card.addEventListener('click', () => {
+          const src = card.getAttribute('data-src');
+          const title = card.getAttribute('data-title');
+          const desc = card.getAttribute('data-desc');
+
+          videoEl.src = src;
+          modalTitle.textContent = title;
+          modalDesc.textContent = desc;
+          modal.classList.add('active');
+          videoEl.play();
+        });
+      });
+
+      function closeModal() {
+        videoEl.pause();
+        videoEl.src = '';
+        modal.classList.remove('active');
+      }
+
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+    });
+  </script>
+</body>
+</html>

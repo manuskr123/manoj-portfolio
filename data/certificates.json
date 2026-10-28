@@ -1,0 +1,58 @@
+[
+  {
+    "id": "html-training",
+    "title": "HTML Training",
+    "issuer": "IIT Bombay · Spoken Tutorial",
+    "date": "Verified Credential",
+    "image": "assets/images/certificates/html-training.webp",
+    "type": "image"
+  },
+  {
+    "id": "linux-training",
+    "title": "Linux Training",
+    "issuer": "IIT Bombay · Spoken Tutorial",
+    "date": "Verified Credential",
+    "image": "assets/images/certificates/linux-training.webp",
+    "type": "image"
+  },
+  {
+    "id": "rs-cit",
+    "title": "RS-CIT",
+    "issuer": "Vardhman Mahaveer Open University",
+    "date": "State Certified",
+    "image": "assets/images/certificates/rs-cit.webp",
+    "type": "image"
+  },
+  {
+    "id": "research-paper-publication",
+    "title": "Research Paper Publication",
+    "issuer": "IJIRT · Vol. 12, Issue 12",
+    "date": "May 2026",
+    "image": "assets/images/certificates/research-paper-publication.webp",
+    "type": "image"
+  },
+  {
+    "id": "icas-digital-technologies",
+    "title": "ICAS Digital Technologies — Merit",
+    "issuer": "UNSW Global",
+    "date": "2017",
+    "image": "assets/images/certificates/icas-digital-technologies.webp",
+    "type": "image"
+  },
+  {
+    "id": "frontend-internship",
+    "title": "Front-End Development Internship",
+    "issuer": "CodeCrafter Technologies",
+    "date": "2026",
+    "image": "assets/images/certificates/frontend-internship.webp",
+    "type": "image"
+  },
+  {
+    "id": "hour-of-code",
+    "title": "Hour of Code — Appreciation",
+    "issuer": "Codevidhya",
+    "date": "2017",
+    "image": "assets/images/certificates/hour-of-code.jpg",
+    "type": "image"
+  }
+]

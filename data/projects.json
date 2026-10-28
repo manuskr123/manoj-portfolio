@@ -1,0 +1,74 @@
+[
+  {
+    "id": "noc-portal",
+    "title": "NOC Portal for Universities",
+    "description": "Digital NOC requests, admin approvals, email signature system and PDF generation.",
+    "technologies": "React, Next.js, Tailwind",
+    "category": "Web Development",
+    "link": "https://lnkd.in/p/gnwBQVSV",
+    "badge": "Live Demo"
+  },
+  {
+    "id": "taskmaster",
+    "title": "TaskMaster — To-Do App",
+    "description": "Productivity app with reminders, dark mode & offline persistence.",
+    "technologies": "JavaScript, HTML, CSS",
+    "category": "Web Application",
+    "link": "https://lnkd.in/p/gnwBQVSV",
+    "badge": "Live Demo"
+  },
+  {
+    "id": "resume-builder",
+    "title": "Resume Builder",
+    "description": "Resume creation experience with live preview.",
+    "technologies": "React, JavaScript, CSS3",
+    "category": "Web Application",
+    "link": "",
+    "badge": "Local Deployment"
+  },
+  {
+    "id": "badfellowmedia",
+    "title": "BadFellowMedia",
+    "description": "Music portfolio website for the BadFellowMedia label.",
+    "technologies": "HTML, CSS, JavaScript, XML",
+    "category": "Web Development",
+    "link": "",
+    "badge": "Local Deployment"
+  },
+  {
+    "id": "jio-promo-clone",
+    "title": "Jio Promo Clone",
+    "description": "Pixel-faithful marketing site clone.",
+    "technologies": "HTML5, CSS3, JavaScript",
+    "category": "Web Development",
+    "link": "",
+    "badge": "Local Deployment"
+  },
+  {
+    "id": "ekunit",
+    "title": "EKUNIT — Blood Donation",
+    "description": "Donor matching & request platform.",
+    "technologies": "React, Node.js, MongoDB",
+    "category": "Web Application",
+    "link": "",
+    "badge": "Local Deployment"
+  },
+  {
+    "id": "desi-drip",
+    "title": "Desi Drip — Lyrical Video",
+    "description": "Music video edit with cinematic transitions and color grade.",
+    "technologies": "DaVinci Resolve, Premiere Pro, Canva, Firefly",
+    "category": "Video & Design",
+    "link": "",
+    "badge": "Creative Production"
+  },
+  {
+    "id": "tera-hogya-re-bhole",
+    "title": "Tera Hogya Re Bhole",
+    "description": "Devotional music video edit with grading.",
+    "technologies": "DaVinci Resolve, InShot, Canva, Premiere Pro",
+    "category": "Video & Design",
+    "link": "",
+    "badge": "Creative Production"
+  }
+]

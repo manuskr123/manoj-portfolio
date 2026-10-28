@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience — Manoj Kumar</title>
+  <meta name="description" content="Professional experience and career timeline of Manoj Kumar across creative leadership, front-end development, and media management.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    /* Cinematic Timeline Styles */
+    .timeline-container {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+    .timeline-container::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background-color: var(--border);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1px;
+    }
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      right: -8px;
+      background-color: var(--bg-color);
+      border: 3px solid var(--accent);
+      top: 30px;
+      border-radius: 50%;
+      z-index: 10;
+    }
+    .timeline-left {
+      left: 0;
+    }
+    .timeline-right {
+      left: 50%;
+    }
+    .timeline-right::after {
+      left: -8px;
+    }
+    .timeline-content {
+      padding: 2.5rem;
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      position: relative;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .timeline-content:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(197, 244, 103, 0.08);
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline-container::after {
+        left: 31px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .timeline-right {
+        left: 0%;
+      }
+      .timeline-left::after, .timeline-right::after {
+        left: 23px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Global Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">MANOJ X <span>STUDIO</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html" class="active">Experience</a></li>
+          <li><a href="work-showcase.html">Work Showcase</a></li>
+          <li><a href="writing.html">Writing</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section style="padding: 10rem 0 4rem; border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <span class="eyebrow">Professional Timeline</span>
+      <h1 style="font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 1rem;">Experience & Roles</h1>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 600px;">
+        A track record of leadership, technical execution, and digital media production spanning creative labels, tech startups, and platforms.
+      </p>
+    </div>
+  </section>
+
+  <!-- Experience Timeline Section -->
+  <section style="padding: 6rem 0;">
+    <div class="container">
+      <div class="timeline-container">
+        
+        <!-- Item 1: Founder (Left) -->
+        <div class="timeline-item timeline-left">
+          <div class="timeline-content">
+            <span style="font-family: var(--font-heading); font-size: 0.85rem; color: var(--accent); display: block; margin-bottom: 0.5rem;">2021 — PRESENT</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">Founder</h3>
+            <h4 style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 1.25rem; font-weight: 500;">BadFellowMedia</h4>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              "Independent creative label producing music videos, lyrical edits and brand stories."
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2: Front-End Developer (Right) -->
+        <div class="timeline-item timeline-right">
+          <div class="timeline-content">
+            <span style="font-family: var(--font-heading); font-size: 0.85rem; color: var(--accent); display: block; margin-bottom: 0.5rem;">2021 — 2023</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">Front-End Developer</h3>
+            <h4 style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 1.25rem; font-weight: 500;">T2S — The 2 Students</h4>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              "Built marketing pages, dashboards and internal tools with a focus on motion & polish."
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3: Social Media Manager (Left) -->
+        <div class="timeline-item timeline-left">
+          <div class="timeline-content">
+            <span style="font-family: var(--font-heading); font-size: 0.85rem; color: var(--accent); display: block; margin-bottom: 0.5rem;">2019 — 2020</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">Social Media Manager</h3>
+            <h4 style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 1.25rem; font-weight: 500;">Moj App</h4>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              "Grew creator partnerships, curated trends and managed content cadence."
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <a href="index.html" class="logo">MANOJ X <span>STUDIO</span></a>
+        <p>"The Logic of an MCA, The Vision of a Designer." Building cinematic digital experiences from Sikar, Rajasthan.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="work-showcase.html">Work Showcase</a></li>
+          <li><a href="writing.html">Writing</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:itsmanuskr@gmail.com">Email Me</a></li>
+          <li><a href="https://wa.me/919929375172" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Manoj Kumar. All rights reserved.</p>
+      <p>Cinematic Creative Engineering</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

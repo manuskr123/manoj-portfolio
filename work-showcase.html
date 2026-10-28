@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Showcase — Manoj Kumar</title>
+  <meta name="description" content="Explore professional work showcase including internships, online projects, office documentation, graphic design gallery, and video editing productions.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Global Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">MANOJ X <span>STUDIO</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="work-showcase.html" class="active">Work Showcase</a></li>
+          <li><a href="writing.html">Writing</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section style="padding: 10rem 0 3rem; border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <span class="eyebrow">Professional Portfolio</span>
+      <h1 style="font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 1rem;">Work Showcase</h1>
+      <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 650px;">
+        Explore a comprehensive collection of internship reports, online applications, back-office documentation bundles, graphic design galleries, and cinematic video productions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Showcase Categories Section -->
+  <section style="padding: 6rem 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 3rem;">
+        
+        <!-- Category 1: Internship -->
+        <div style="background-color: var(--surface); border: 1px solid var(--border); padding: 3rem; border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span style="font-size: 0.85rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.75rem;">Category 01</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Internship Report</h3>
+            <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6; margin-bottom: 2rem;">
+              Comprehensive documentation and final report detailing hands-on front-end development, project execution, and technical learnings.
+            </p>
+          </div>
+          <div>
+            <button id="openPdfModalBtn" class="btn btn-primary" style="width: 100%;">View Internship Work →</button>
+          </div>
+        </div>
+
+        <!-- Category 2: Online Links -->
+        <div style="background-color: var(--surface); border: 1px solid var(--border); padding: 3rem; border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span style="font-size: 0.85rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.75rem;">Category 02</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Online Live Links</h3>
+            <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6; margin-bottom: 2rem;">
+              Direct access to live deployed web applications, portals, and client-facing digital deployments hosted online.
+            </p>
+          </div>
+          <div>
+            <a href="projects.html" class="btn btn-primary" style="width: 100%; text-align: center;">View Online Projects →</a>
+          </div>
+        </div>
+
+        <!-- Category 3: Computer Operator & Back Office (Dropdown) -->
+        <div style="background-color: var(--surface); border: 1px solid var(--border); padding: 3rem; border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span style="font-size: 0.85rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.75rem;">Category 03</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Computer Operator & Back Office</h3>
+            <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6; margin-bottom: 2rem;">
+              Professional spreadsheets, automated calculation templates, and comprehensive HR documentation bundles.
+            </p>
+          </div>
+          <div style="position: relative;">
+            <select id="backOfficeSelect" class="btn btn-secondary" style="width: 100%; background-color: var(--surface-elevated); color: var(--text-primary); cursor: pointer; text-align: left; padding-right: 2.5rem;">
+              <option value="" disabled selected>Select Document Bundle...</option>
+              <option value="assets/documents/Bad Fellow Media Excel Operations Templates.pdf">Excel Operations Templates</option>
+              <option value="assets/documents/Bad_Fellow_Media_HR_Documentation_Bundle.pdf">Documentation Bundle</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category 4: Graphic Designing -->
+        <div style="background-color: var(--surface); border: 1px solid var(--border); padding: 3rem; border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span style="font-size: 0.85rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.75rem;">Category 04</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Graphic Designing Gallery</h3>
+            <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6; margin-bottom: 2rem;">
+              A curated collection of 22 professional graphic designs, brand posters, menu cards, social media assets, and promotional banners.
+            </p>
+          </div>
+          <div>
+            <a href="graphic-design.html" class="btn btn-primary" style="width: 100%; text-align: center;">View Graphic Design Work →</a>
+          </div>
+        </div>
+
+        <!-- Category 5: Video Editing -->
+        <div style="background-color: var(--surface); border: 1px solid var(--border); padding: 3rem; border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span style="font-size: 0.85rem; color: var(--accent); font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.75rem;">Category 05</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Video Editing & Motion</h3>
+            <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6; margin-bottom: 2rem;">
+              Cinematic video productions, AI-generated commercials, showroom promos, event reels, and social media video edits.
+            </p>
+          </div>
+          <div>
+            <a href="video-editing.html" class="btn btn-primary" style="width: 100%; text-align: center;">View Video Editing Work →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PDF Popup Modal -->
+  <div id="pdfModal" style="display: none; position: fixed; inset: 0; background: rgba(11, 13, 12, 0.85); backdrop-filter: blur(8px); z-index: 2000; align-items: center; justify-content: center; padding: 2rem;">
+    <div style="background: var(--surface); border: 1px solid var(--border); width: 100%; max-width: 900px; height: 85vh; border-radius: 8px; display: flex; flex-direction: column; overflow: hidden;">
+      <div style="padding: 1.25rem 2rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="font-size: 1.25rem;">Manoj Kumar (Final_Report).pdf</h3>
+        <button id="closePdfModalBtn" style="background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer;">&times;</button>
+      </div>
+      <div style="flex: 1; background: #000;">
+        <iframe src="assets/documents/Manoj Kumar (Final_Report).pdf" style="width: 100%; height: 100%; border: none;" title="Internship Report PDF"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <a href="index.html" class="logo">MANOJ X <span>STUDIO</span></a>
+        <p>"The Logic of an MCA, The Vision of a Designer." Building cinematic digital experiences from Sikar, Rajasthan.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="work-showcase.html">Work Showcase</a></li>
+          <li><a href="writing.html">Writing</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:itsmanuskr@gmail.com">Email Me</a></li>
+          <li><a href="https://wa.me/919929375172" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Manoj Kumar. All rights reserved.</p>
+      <p>Cinematic Creative Engineering</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // PDF Modal Functionality
+      const modal = document.getElementById('pdfModal');
+      const openBtn = document.getElementById('openPdfModalBtn');
+      const closeBtn = document.getElementById('closePdfModalBtn');
+
+      if (openBtn && modal) {
+        openBtn.addEventListener('click', () => {
+          modal.style.display = 'flex';
+        });
+      }
+      if (closeBtn && modal) {
+        closeBtn.addEventListener('click', () => {
+          modal.style.display = 'none';
+        });
+      }
+      window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+
+      // Back Office Dropdown Selection
+      const dropdown = document.getElementById('backOfficeSelect');
+      if (dropdown) {
+        dropdown.addEventListener('change', (e) => {
+          const selectedPdf = e.target.value;
+          if (selectedPdf) {
+            window.open(selectedPdf, '_blank');
+            dropdown.selectedIndex = 0; // Reset dropdown
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

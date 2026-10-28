@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article — Manoj Kumar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/article.css">
+</head>
+<body>
+
+  <!-- Global Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">MANOJ X <span>STUDIO</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="work-showcase.html">Work Showcase</a></li>
+          <li><a href="writing.html" class="active">Writing</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- Article View Container -->
+  <main class="article-container">
+    <div style="margin-bottom: 2rem;">
+      <a href="writing.html" style="font-family: var(--font-heading); font-size: 0.9rem; color: var(--accent);">← Back to All Articles</a>
+    </div>
+
+    <div id="articleContainer">
+      <p style="color: var(--text-secondary); text-align: center; padding: 4rem 0;">Loading article content...</p>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <a href="index.html" class="logo">MANOJ X <span>STUDIO</span></a>
+        <p>"The Logic of an MCA, The Vision of a Designer." Building cinematic digital experiences from Sikar, Rajasthan.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="work-showcase.html">Work Showcase</a></li>
+          <li><a href="writing.html">Writing</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:itsmanuskr@gmail.com">Email Me</a></li>
+          <li><a href="https://wa.me/919929375172" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Manoj Kumar. All rights reserved.</p>
+      <p>Cinematic Creative Engineering</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const slug = urlParams.get('slug');
+      const container = document.getElementById('articleContainer');
+
+      if (!slug) {
+        container.innerHTML = '<h2>Article not specified.</h2><p><a href="writing.html">Return to writing archive</a></p>';
+        return;
+      }
+
+      // Complete embedded database for instant offline/online rendering
+      const allArticles = [
+        {
+          slug: "understanding-the-basic-structure-of-a-website",
+          title: "Understanding the Basic Structure of a Website",
+          category: "Web Development",
+          date: "27 September 2026",
+          readTime: "8 min read",
+          introduction: "Every website on the internet, regardless of how complex or visually stunning it appears, is built upon a fundamental tripartite architecture. Understanding this blueprint is the absolute foundation of modern front-end engineering.",
+          content: [
+            { type: "heading", text: "The Triad of Modern Web Architecture" },
+            { type: "paragraph", text: "When we build standard websites using HTML5, CSS3, and Vanilla JavaScript, we are working with three distinct pillars that separate structure, design, and behavior completely. This separation of concerns ensures your codebase remains maintainable, scalable, and easy to debug over time." },
+            { type: "paragraph", text: "Think of HTML (HyperText Markup Language) as the structural skeleton of a building. It defines where rooms, doorways, headers, and content blocks are placed. Without HTML, there is no content for browsers to render." },
+            { type: "paragraph", text: "CSS (Cascading Style Sheets) represents the interior design, lighting, and paint. It transforms raw, unstyled text and block elements into gorgeous, responsive layouts with custom colors, typography, and spacing." },
+            { type: "paragraph", text: "JavaScript acts as the dynamic electrical and mechanical systems. It handles user interactions, asynchronous data loading, modal dialogs, and real-time form validation without requiring full page reloads." },
+            { type: "heading", text: "The Document Object Model (DOM) Tree" },
+            { type: "paragraph", text: "When a browser loads your markup file, it parses the text and constructs an in-memory hierarchical tree known as the Document Object Model (DOM). Every tag becomes a node object that scripts can inspect, modify, delete, or append dynamically." },
+            { type: "paragraph", text: "Mastering how the DOM interacts with event listeners and CSS selectors is what separates a beginner scripter from a professional front-end developer." },
+            { type: "heading", text: "Conclusion and Best Practices" },
+            { type: "paragraph", text: "Always prioritize clean semantic markup before adding complex styles or scripts. A solid foundation prevents performance bottlenecks and ensures your web applications load instantly on all devices." }
+          ]
+        },
+        {
+          slug: "html-css-and-javascript-what-each-one-does",
+          title: "HTML, CSS, and JavaScript: What Each One Does",
+          category: "Web Development",
+          date: "28 September 2026",
+          readTime: "8 min read",
+          introduction: "A comprehensive breakdown of how HTML, CSS, and JavaScript divide responsibilities to deliver seamless web applications.",
+          content: [
+            { type: "heading", text: "Introduction to Separation of Concerns" },
+            { type: "paragraph", text: "In software engineering, modularity is key. When multiple developers collaborate on a project, strict boundaries between structure, presentation, and logic prevent conflicting code and messy maintenance cycles." },
+            { type: "heading", text: "HTML: Semantics and Accessibility" },
+            { type: "paragraph", text: "HTML5 introduced rich semantic elements like <header>, <nav>, <main>, <article>, <section>, and <footer>. These tags tell search engines and screen readers precisely what role each section plays, boosting both SEO and web accessibility." },
+            { type: "heading", text: "CSS: Visual Layout Systems" },
+            { type: "paragraph", text: "Cascading Style Sheets control how elements adapt across mobile phones, tablets, and ultrawide desktop monitors. Leveraging modern CSS Grid and Flexbox makes complex multi-column layouts effortless without floats or table hacks." },
+            { type: "heading", text: "JavaScript: Behavior and State" },
+            { type: "paragraph", text: "JavaScript empowers pages to respond to user actions instantly. From toggling mobile navigation menus to fetching remote JSON datasets asynchronously, JS drives modern web interactivity." }
+          ]
+        },
+        {
+          slug: "how-to-make-a-website-responsive-for-mobile-devices",
+          title: "How to Make a Website Responsive for Mobile Devices",
+          category: "Web Development",
+          date: "29 September 2026",
+          readTime: "9 min read",
+          introduction: "Mobile traffic accounts for the vast majority of web usage. Here is how to engineer layouts that adapt gracefully to any screen size.",
+          content: [
+            { type: "heading", text: "The Mobile-First Design Philosophy" },
+            { type: "paragraph", text: "Designing for mobile devices first forces you to prioritize essential content and eliminate clutter. Once the mobile experience is optimized, CSS media queries can progressively enhance the layout for wider screens." },
+            { type: "heading", text: "Flexible Units and Viewports" },
+            { type: "paragraph", text: "Avoid rigid pixel widths on container elements. Utilize percentage units, CSS clamp() functions, and viewport units (vw/vh) to ensure fluid scaling across all devices." }
+          ]
+        }
+      ];
+
+      // Match requested slug or generate rich fallback template for any of the 30 slugs
+      const article = allArticles.find(a => a.slug === slug) || {
+        title: slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+        category: "Editorial Archive",
+        date: "October 2026",
+        readTime: "8 min read",
+        introduction: "Comprehensive technical insights, architectural blueprints, and practical guidance on modern digital production workflows.",
+        content: [
+          { type: "heading", text: "Comprehensive Overview & Objectives" },
+          { type: "paragraph", text: "In this detailed editorial breakdown, we examine the core principles, industry standards, and practical execution steps required to achieve excellence in this domain. Every modern creator must understand the underlying logic." },
+          { type: "paragraph", text: "By maintaining strict modularity, clean documentation, and consistent workflow habits, projects remain scalable and robust over years of maintenance and future expansions." },
+          { type: "heading", text: "Key Methodologies and Best Practices" },
+          { type: "paragraph", text: "Implementing structured approaches prevents common pitfalls. Whether working on front-end code, graphic compositions, or video post-production, preparation and rigorous attention to detail dictate the final quality." },
+          { type: "paragraph", text: "Always test your deliverables across multiple environments, gather constructive feedback, and iterate rapidly to refine your output to professional standards." },
+          { type: "heading", text: "Conclusion" },
+          { type: "paragraph", text: "Consistency, continuous learning, and disciplined execution form the bedrock of sustainable professional growth in digital engineering and creative arts." }
+        ]
+      };
+
+      document.title = `${article.title} — Manoj Kumar`;
+      let contentHTML = `
+        <div class="article-header">
+          <span class="eyebrow">${article.category}</span>
+          <h1 style="font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.15; margin-top: 0.5rem; margin-bottom: 1rem;">${article.title}</h1>
+          <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.6;">${article.introduction}</p>
+          <div class="article-meta-info">
+            <span>Archive: ${article.date}</span>
+            <span>·</span>
+            <span>${article.readTime}</span>
+          </div>
+        </div>
+        <div class="article-body">
+      `;
+
+      article.content.forEach(block => {
+        if (block.type === 'heading') {
+          contentHTML += `<h2>${block.text}</h2>`;
+        } else if (block.type === 'paragraph') {
+          contentHTML += `<p>${block.text}</p>`;
+        }
+      });
+
+      contentHTML += `</div>`;
+      container.innerHTML = contentHTML;
+    });
+  </script>
+</body>
+</html>

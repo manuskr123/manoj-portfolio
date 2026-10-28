@@ -1,0 +1,75 @@
+/* ==========================================
+   MANOJ X STUDIO — Editorial Article Styles
+   ========================================== */
+
+.article-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 8rem 2rem 4rem;
+}
+
+.article-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.article-meta-info {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  font-family: var(--font-heading);
+}
+
+.article-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #E2E4DE;
+}
+
+.article-body h2 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.article-body h3 {
+  font-size: 1.35rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.article-body p {
+  margin-bottom: 1.5rem;
+}
+
+.article-body ul, .article-body ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.article-body li {
+  margin-bottom: 0.5rem;
+}
+
+.article-body strong {
+  color: var(--text-primary);
+}
+
+.article-body blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--text-primary);
+  background-color: var(--surface);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0 4px 4px 0;
+}
